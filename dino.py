@@ -73,3 +73,16 @@ class Dino:
             self.is_walking = False
             self.image = self.images['jump']
             self.dy = -14
+
+    def reset(self):
+        self.image = self.images['before_starting']
+        self.y = SCREEN_HEIGHT - self.image.get_height()
+        self.dy = 0
+
+        self.current_step = 0
+        self.step = 1
+
+        self.idle = True
+        self.is_walking = False
+        self.is_jumping = False
+        self.game_over = False
